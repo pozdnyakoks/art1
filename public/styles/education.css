@@ -1,0 +1,27 @@
+.swiper.education-swiper {
+  position: absolute;
+  height: 100%;
+  width: 24%;
+  top: 0;
+  right: 0;
+}
+
+.education-desc-block {
+  display: flex;
+  gap: 7%;
+}
+
+.education-descs {
+  width: 39%;
+  padding-left: 2%;
+}
+
+.education-desc {
+  margin-bottom: 45px;
+}
+
+.education-btn {
+  margin-top: 18%;
+  ;
+  padding: 10px 60px;
+}

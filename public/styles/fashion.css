@@ -1,0 +1,36 @@
+.fashion-desc-block {
+  display: flex;
+  gap: 5%;
+  align-items: center;
+  justify-content: center;
+}
+
+.fashion-descs {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  width: 51%;
+}
+
+.fashion-desc {
+  margin-bottom: 25px;
+  ;
+}
+
+.fashion-btns {
+  margin-top: 50px;
+  display: flex;
+  gap: 8%;
+}
+
+.fashion-btn {
+  padding: 17px 52px 15px;
+  border-radius: 100px;
+}
+
+.fashion-img {
+  border-radius: 2px;
+  box-shadow: 1px 4px 16px 0px rgba(235, 94, 158, 0.10);
+}

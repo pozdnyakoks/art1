@@ -1,0 +1,24 @@
+.breakfast-info {
+  margin-top: 9%;
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+}
+
+.breakfast-img {
+  box-shadow: 1px 4px 16px 0px rgba(235, 94, 158, 0.10);
+}
+
+.breakfast-desc {
+  line-height: 138%;
+  margin-bottom: 22px;
+}
+
+.breakfast-desc-block {
+  width: 30%;
+}
+
+.breakfast-btn {
+  margin-top: 45px;
+  padding: 10px 100px;
+}

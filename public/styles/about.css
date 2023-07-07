@@ -1,0 +1,27 @@
+.about-info {
+  gap: 60px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.about-img {
+  border-radius: 2px;
+  margin-left: 5%;
+  box-shadow: 1px 4px 16px 0px rgba(235, 94, 158, 0.10);
+}
+
+.about-desc-block {
+  width: 55%;
+}
+
+.about-desc:not(:last-child) {
+  margin-bottom: 23px;
+}
+
+.about-img-back {
+  z-index: -1;
+  position: absolute;
+  right: 5%;
+  bottom: 9%;
+}

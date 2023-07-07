@@ -1,0 +1,25 @@
+.corporate-imgs {
+  padding-top: 15%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.corporates-desc {
+  width: 100%;
+}
+
+.corporates-btn {
+  margin-top: 12%;
+  ;
+  border-radius: 20px;
+  padding: 10px 80px;
+}
+
+.corporates-desc-block {
+  display: flex;
+  gap: 4%;
+  align-items: center;
+  justify-content: center;
+}

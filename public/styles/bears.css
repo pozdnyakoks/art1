@@ -1,0 +1,42 @@
+.bears-desc-block {
+  width: 41%;
+  margin-left: 17%;
+  margin-top: 12%;
+}
+
+.bears-desc {
+  margin-bottom: 20px;
+  line-height: 140%;
+}
+
+.bears-btn {
+  margin-top: 60px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.swiper.bears-swiper {
+  overflow: visible;
+  height: 100%;
+  position: absolute;
+  right: 6%;
+  top: 0;
+  width: 31%;
+}
+
+.second-row {
+  margin-bottom: -21px;
+}
+
+.second-row img {
+  margin-top: -25px;
+  margin-left: auto;
+}
+
+.bears-img {
+  transition: .3s ease;
+}
+
+.bears-img:hover {
+  transform: scale(1.2)
+}

@@ -1,0 +1,38 @@
+#map {
+  z-index: 5;
+  height: 320px;
+  width: 67%;
+}
+
+.map-desc {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 10%;
+  ;
+}
+
+.map-block {
+  margin-left: 2%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.map-btn {
+  padding: 10px 80px;
+}
+
+.map .slide-content {
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  height: 70%;
+}
+
+.map-desc-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  /* margin-top: 11%; */
+}

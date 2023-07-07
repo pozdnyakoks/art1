@@ -1,0 +1,66 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@font-face {
+  font-family: Baskerville;
+  src: local("Baskerville-Light"),
+    url("/fonts/Baskerville-Light.woff2") format("woff2"),
+    url("/fonts/Baskerville-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Baskerville;
+  src: local("Baskerville-SemiBold"),
+    url("/fonts/Baskerville-SemiBold.woff2") format("woff2"),
+    url("/fonts/Baskerville-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: local("Manrope-Light"),
+    url("/fonts/Manrope-Light.woff2") format("woff2"),
+    url("/fonts/Manrope-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: local("Manrope-Regular"),
+    url("/fonts/Manrope-Regular.woff2") format("woff2"),
+    url("/fonts/Manrope-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: local("Manrope-Medium"),
+    url("/fonts/Manrope-Medium.woff2") format("woff2"),
+    url("/fonts/Manrope-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: local("Manrope-SemiBold"),
+    url("/fonts/Manrope-SemiBold.woff2") format("woff2"),
+    url("/fonts/Manrope-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
