@@ -15,15 +15,15 @@ burgerBtn.addEventListener('click', () => {
 })
 
 
-const apply = document.querySelector('.btn');
+const apply = document.querySelector('#apply');
 const modal = document.querySelector('.modal');
 
 const closeModal = document.querySelector('.close-modal');
 
 apply.addEventListener('click', () => {
+  console.log('click')
   modal.classList.add('visible');
 })
-
 
 closeModal.addEventListener('click', () => {
   modal.classList.remove('visible');

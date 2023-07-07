@@ -18,7 +18,10 @@
         <h2 class="modal-title">Оставьте заявку</h2>
         <p class="modal-desc">мы свяжемся с вами в ближайшее время!</p>
         <form action="/" class="form">
-
+          <input type="text" name="name" class="modal-input" placeholder="Ваше имя">
+          <input type="tel" name="tel" class="modal-input" placeholder="Ваш контактный номер телефона">
+          <input type="email" name="mail" class="modal-input" placeholder="Ваша электронная почта">
+          <button disabled class="modal-btn btn">Записаться</button>
         </form>
       </div>
     </div>
@@ -122,7 +125,7 @@
                 </div>
                 <img class="breakfast-img" src="./img/breakfast2.jpg" alt="арт-завтрак">
               </div>
-              <button class="btn breakfast-btn">записаться</button>
+              <button id="apply" class="btn breakfast-btn">записаться</button>
             </div>
 
           </section>
