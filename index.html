@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ALISA FATTAKHOVA ART</title>
+  <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -18,6 +19,26 @@
         <h2 class="modal-title">Оставьте заявку</h2>
         <p class="modal-desc">мы свяжемся с вами в ближайшее время!</p>
         <form action="/" class="form">
+
+          <div class="modal-select" data-state="">
+            <div class="modal-select__title" data-default="Option 0">Хочу на арт-завтрак!</div>
+            <div class="modal-select__content">
+              <input id="breakfastEvent" class="modal-select__input" type="radio" name="eventType" />
+              <label for="breakfastEvent" class="modal-select__label">Хочу на арт-завтрак!</label>
+              <input id="bearsEvent" class="modal-select__input" type="radio" name="eventType" />
+              <label for="bearsEvent" class="modal-select__label">Хочу на роспись мишек!</label>
+              <input id="newFashionEvent" class="modal-select__input" type="radio" name="eventType" />
+              <label for="newFashionEvent" class="modal-select__label">Fashion illustration: Я-новичок</label>
+              <input id="profiFashionEvent" class="modal-select__input" type="radio" name="eventType" />
+              <label for="profiFashionEvent" class="modal-select__label">Fashion illustration: Я-профи</label>
+              <input id="corporateEvent" class="modal-select__input" type="radio" name="eventType" />
+              <label for="corporateEvent" class="modal-select__label">хочу провести корпоратив</label>
+              <input id="lessonEvent" class="modal-select__input" type="radio" name="eventType" />
+              <label for="lessonEvent" class="modal-select__label">хочу научиться рисовать</label>
+            </div>
+          </div>
+
+
           <input type="text" name="name" class="modal-input" placeholder="Ваше имя">
           <input type="tel" name="tel" class="modal-input" placeholder="Ваш контактный номер телефона">
           <input type="email" name="mail" class="modal-input" placeholder="Ваша электронная почта">
@@ -46,9 +67,11 @@
         </ul>
       </nav>
       <ul class="social-links">
-        <li class="social-links-item"><a href="#"><img src="./img/Telegram.svg" alt="telegram"></a></li>
-        <li class="social-links-item"><a href="#"><img src="./img/Insta.svg" alt="Instagram"></a></li>
-        <li class="social-links-item"><a href="#"><img src="./img/VK.svg" alt="VK"></a></li>
+        <!-- <li class="social-links-item"><a href="#"><img src="./img/Telegram.svg" alt="telegram"></a></li> -->
+        <li class="social-links-item"><a target="_blank"
+            href="https://www.instagram.com/artstudio.af/?igshid=NTc4MTIwNjQ2YQ%3D%3D"><img src="./img/Insta.svg"
+              alt="Instagram"></a></li>
+        <!-- <li class="social-links-item"><a href="#"><img src="./img/VK.svg" alt="VK"></a></li> -->
       </ul>
     </header>
     <main>
@@ -262,7 +285,7 @@
 
 
           </section>
-          <section class="section about swiper-slide" id="education">
+          <section class="section education swiper-slide" id="education">
             <div class="slide-content">
 
               <h2 class="title">уроки рисования</h2>
@@ -313,14 +336,189 @@
             <!-- <img class="backLogo" src="./img/backlogo.png" alt="eucation"> -->
 
           </section>
-          <section class="section about swiper-slide" id="market">
+
+          <div class="modal-market">
+            <div class="modal-market-content">
+              <button class="modal-market-close"><img src="/img/close.svg" alt="закрыть"></button>
+              <h3 class="modal-market-title"><span class="modal-market-name">футболка</span>
+                <span class="modal-market-price">2 800</span>
+              </h3>
+              <img class="modal-market-img" src="./img/market/market1.jpg" alt="">
+              <p class="modal-market-desc">Эта футболка является идеальным сочетанием стиля и комфорта.<br>
+                Ее уникальный дизайн и качественные материалы делают ее отличным выбором для любого повседневного
+                образа.</p>
+              <button class="btn market-btn modal-market-btn" disabled>в корзину<svg class="market-btn-svg"
+                  xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                  <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></button>
+            </div>
+          </div>
+          <section class="section market swiper-slide" id="market">
             <div class="slide-content">
               <h2 class="title">маркет</h2>
+              <div class="swiper market-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide market-slide">
+                    <div class="market-card">
+                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
+                      <p class="market-card-desc">
+                        <span class="market-card-name">сумка-тоут</span>
+                        <span class="market-card-price">1800</span>
+                      </p>
+                      <button class="btn market-btn" disabled>В корзину<svg class="market-btn-svg"
+                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
+                    </div>
+                    <div class="market-card">
+                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
+                      <p class="market-card-desc">
+                        <span class="market-card-name">сумка-тоут</span>
+                        <span class="market-card-price">1800</span>
+                      </p>
+                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
+                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
+                    </div>
+                    <div class="market-card">
+                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
+                      <p class="market-card-desc">
+                        <span class="market-card-name">сумка-тоут</span>
+                        <span class="market-card-price">1800</span>
+                      </p>
+                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
+                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
+                    </div>
+                    <div class="market-card">
+                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
+                      <p class="market-card-desc">
+                        <span class="market-card-name">сумка-тоут</span>
+                        <span class="market-card-price">1800</span>
+                      </p>
+                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
+                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide market-slide">
+                    <div class="market-card">
+                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
+                      <p class="market-card-desc">
+                        <span class="market-card-name">сумка-тоут</span>
+                        <span class="market-card-price">1800</span>
+                      </p>
+                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
+                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
+                    </div>
+                    <div class="market-card">
+                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
+                      <p class="market-card-desc">
+                        <span class="market-card-name">сумка-тоут</span>
+                        <span class="market-card-price">1800</span>
+                      </p>
+                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
+                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
+                    </div>
+                    <div class="market-card">
+                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
+                      <p class="market-card-desc">
+                        <span class="market-card-name">сумка-тоут</span>
+                        <span class="market-card-price">1800</span>
+                      </p>
+                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
+                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
+                    </div>
+                    <div class="market-card">
+                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
+                      <p class="market-card-desc">
+                        <span class="market-card-name">сумка-тоут</span>
+                        <span class="market-card-price">1800</span>
+                      </p>
+                      <button class="btn market-btn market-incart">В корзине<svg class="market-btn-svg"
+                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide market-slide">
+                    <div class="market-card">
+                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
+                      <p class="market-card-desc">
+                        <span class="market-card-name">сумка-тоут</span>
+                        <span class="market-card-price">1800</span>
+                      </p>
+                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
+                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
+                    </div>
+                    <div class="market-card">
+                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
+                      <p class="market-card-desc">
+                        <span class="market-card-name">сумка-тоут</span>
+                        <span class="market-card-price">1800</span>
+                      </p>
+                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
+                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
+                    </div>
+                    <div class="market-card">
+                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
+                      <p class="market-card-desc">
+                        <span class="market-card-name">сумка-тоут</span>
+                        <span class="market-card-price">1800</span>
+                      </p>
+                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
+                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
+                    </div>
+                    <div class="market-card">
+                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
+                      <p class="market-card-desc">
+                        <span class="market-card-name">сумка-тоут</span>
+                        <span class="market-card-price">1800</span>
+                      </p>
+                      <button class="btn market-btn market-incart">В корзине<svg class="market-btn-svg"
+                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="prev-market market-nav"><img src="./img/reviews/prev.svg" alt="предыдущий"></button>
+              <button class="next-market market-nav"><img src="./img/reviews/prev.svg" alt="следующий"></button>
             </div>
-            <!-- <img class="backLogo" src="./img/backlogo.png" alt=""> -->
+
 
           </section>
-          <section class="section about swiper-slide" id="reviews">
+          <section class="section reviews swiper-slide" id="reviews">
             <div class="slide-content">
 
               <h2 class="title">отзывы</h2>
@@ -472,7 +670,8 @@
       <img class="backLogo" src="./img/backlogo.png" alt="">
     </main>
     <div class="cart-link-block">
-      <a class="" href="#"><img class="cart-link" src="/img/cart.svg" alt="корзина"></a>
+      <a class="cart-link" href="cart.html"><img class="cart-link-img" src="/img/cart.svg" alt="корзина"><span
+          class="cart-link-count">2</span></a>
     </div>
     <div class="swiper-pagination main-swiper-pagination"></div>
     <footer><a href="http://www.creativesight.group/" target="_blank"><img class="footer-img" src="./img/csg.png"
@@ -480,6 +679,7 @@
     </footer>
   </div>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=8485d337-06ee-4612-88a9-66784ba0e2f6&lang=ru_RU"></script>
+  <script type="module" src="./index.js"></script>
   <script type="module" src="./main.js"></script>
 </body>
 

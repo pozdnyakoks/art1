@@ -5,13 +5,149 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ALISA FATTAKHOVA ART Корзина</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./styles/cart.css">
 
 </head>
 
 <body>
 
+  <div class="wrapper">
+
+    <header>
+      <button class="burger-btn">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-list-item"><button class="nav-list-item-link">О нас</button></li>
+          <li class="nav-list-item"><button class="nav-list-item-link">Арт-завтрак</button></li>
+          <li class="nav-list-item"><button class="nav-list-item-link">Роспись Мишек BearBrick</button></li>
+          <li class="nav-list-item"><button class="nav-list-item-link">Fashion Illustration</button></li>
+          <li class="nav-list-item"><button class="nav-list-item-link">Корпоративы</button></li>
+          <li class="nav-list-item"><button class="nav-list-item-link">Уроки рисования</button></li>
+          <li class="nav-list-item"><button class="nav-list-item-link">Маркет</button></li>
+          <li class="nav-list-item"><button class="nav-list-item-link">Отзывы</button></li>
+          <li class="nav-list-item"><button class="nav-list-item-link">Контакты</button></li>
+          <li class="nav-list-item"><button class="nav-list-item-link">Карта</button></li>
+        </ul>
+      </nav>
+      <ul class="social-links">
+        <!-- <li class="social-links-item"><a href="#"><img src="./img/Telegram.svg" alt="telegram"></a></li> -->
+        <li class="social-links-item"><a target="_blank"
+            href="https://www.instagram.com/artstudio.af/?igshid=NTc4MTIwNjQ2YQ%3D%3D"><img src="./img/Insta.svg"
+              alt="Instagram"></a></li>
+        <!-- <li class="social-links-item"><a href="#"><img src="./img/VK.svg" alt="VK"></a></li> -->
+      </ul>
+    </header>
+    <main>
+      <img class="logo" src="./img/logo.png" alt="Alisa Fattakhova Art">
+
+      <div class="cart-link-block">
+        <a class="cart-link" href="#"><img class="cart-link-img" src="/img/cart.svg" alt="корзина"><span
+            class="cart-link-count">2</span></a>
+      </div>
+      <section class="section cart" id="cart">
+
+        <h2 class="title">корзина </h2>
+        <!-- пустая корзина -->
+        <!-- <div class="container">
+          <img class="cart-img" src="./img/empty-cart.svg" alt="пустая корзина">
+          <h2 class="empty-cart-title">ой! в корзине пока пусто</h2>
+          <button class="btn empty-btn">перейти в маркет</button>
+        </div> -->
+
+        <!-- заказ оформлен -->
+
+        <!-- <div class="container">
+          <img class="cart-img" src="./img/done-cart.svg" alt="заказ оформлен">
+          <h2 class="empty-cart-title">Заказ оформлен!</h2>
+          <p class="cart-desc">Пожалуйста, дождитесь звонка для подтверждения информации</p>
+          <button class="btn empty-btn">перейти в маркет</button>
+        </div> -->
+
+        <!-- заполненная корзина -->
+
+        <div class="container full-cart">
+          <div class="cart-items">
+            <div class="cart-items-row cart-items-title ">
+              <span class="cart-items-row-price">цена</span><span class="cart-items-row-count">количество</span><span
+                class="cart-items-row-total">итого</span>
+            </div>
+
+            <div class="cart-items-row">
+              <img class="cart-item-img" src="./img/market/mini-cart1.jpg" alt="">
+              <p class="cart-item-name">Футболка<span class="cart-item-size">один размер</span></p>
+              <p class="cart-item-price">2 800</p>
+              <div class="cart-item-count">
+                <button class="cart-item-less cart-item-btn">-</button>
+                <input class="cart-item-number" type="number" placeholder="1">
+                <button class="cart-item-more cart-item-btn">+</button>
+              </div>
+              <p class="cart-item-price cart-item-total">2 800</p>
+              <button class="cart-item-delete"><img src=" /img/delete.svg" alt="удалить"></button>
+
+            </div>
+            <div class="cart-items-row">
+              <img class="cart-item-img" src="./img/market/mini-cart1.jpg" alt="">
+              <p class="cart-item-name">Футболка<span class="cart-item-size">один размер</span></p>
+              <p class="cart-item-price">2 800</p>
+              <div class="cart-item-count">
+                <button class="cart-item-less cart-item-btn">-</button>
+                <input class="cart-item-number" type="number" value="1">
+                <button class="cart-item-more cart-item-btn">+</button>
+              </div>
+              <p class="cart-item-price cart-item-total">2 800</p>
+              <button class="cart-item-delete"><img src=" /img/delete.svg" alt="удалить"></button>
+
+            </div>
+            <p class="cart-delivery-info">
+              Информация о доставке Информация о доставке Информация о доставке Информация о доставке Информация о
+              доставке Информация о доставке
+            </p>
+          </div>
+
+          <div class="cart-info">
+            <form action="/" class="cart-form">
+              <input class="cart-info-promo" type="text" placeholder="промокод">
+              <button class="cart-info-promo-btn">проверить</button>
+
+              <fieldset class="cart-fieldset">
+                <legend class="cart-fieldset-title">способ получения</legend>
+                <label class="cart-label" for="pickup">
+                  <input checked id="pickup" type="radio" class="cart-radio" name="delivery">
+                  <span>самовывоз</span> <span class="radio-price">0 ₽</span>
+                </label>
+                <label class="cart-label" for="pickup">
+                  <input id="pickup" type="radio" class="cart-radio" name="delivery">
+                  <span>доставка</span> <span class="radio-price">600 ₽</span>
+                </label>
+              </fieldset>
+              <input class="cart-input" type="text" name="name" placeholder="ИМЯ ПОЛУЧАТЕЛЯ">
+              <input class="cart-input" type="tel" name="tel" placeholder="КОНТАКТНЫЙ НОМЕР ТЕЛЕФОНА">
+              <input class="cart-input" type="text" name="address" placeholder="АДРЕС ДОСТАВКИ">
+
+              <div class="cart-total-block">
+                <p class="cart-total-desc">ИТОГО</p>
+                <p class="cart-total-desc"><span id="total">6 400</span>₽</p>
+              </div>
+
+              <button class="cart-btn " disabled>оформить заказ</button>
+            </form>
+          </div>
+        </div>
 
 
+      </section>
+    </main>
+    <footer><a href="http://www.creativesight.group/" target="_blank"><img class="footer-img" src="./img/csg.png"
+          alt="Creative Sight Group - студия веб-дизайна"></a>
+    </footer>
+  </div>
+  <script src="./index.js"></script>
+  <!-- <script src="./index.js"></script> -->
 </body>
 
 </html>

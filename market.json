@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "сумка-тоут",
+      "price": 1800,
+      "available": true,
+      "img": "./../img/market/market1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "футболка",
+      "price": 2800,
+      "available": true,
+      "img": "./../img/market/market2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "футболка",
+      "price": 2800,
+      "available": true,
+      "img": "./../img/market/market3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "футболка",
+      "price": 2800,
+      "available": true,
+      "img": "./../img/market/market4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "футболка",
+      "price": 2800,
+      "available": true,
+      "img": "./../img/market/market1.jpg"
+    },
+    {
+      "id": 6,
+      "name": "футболка",
+      "price": 2800,
+      "available": true,
+      "img": "./../img/market/market2.jpg"
+    },
+    {
+      "id": 7,
+      "name": "футболка",
+      "price": 2800,
+      "available": true,
+      "img": "./../img/market/market3.jpg"
+    },
+    {
+      "id": 8,
+      "name": "футболка",
+      "price": 2800,
+      "available": true,
+      "img": "./../img/market/market4.jpg"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+.market-card {
+  /* display: flex; */
+  /* flex-direction: column; */
+  align-self: flex-end;
+  min-height: 268px;
+  max-height: 300px;
+}
+
+.market .swiper {
+  height: 600px;
+  /* overflow: visible; */
+}
+
+.market-swiper {
+  height: 100%;
+}
+
+.market .slide-content {
+  padding-top: 9.5%;
+  height: 90%;
+}
+
+.market-swiper .market-slide {
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 268px;
+  max-height: 300px;
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  /* overflow: visible; */
+}
+
+.market-card-img {
+  max-width: 100%;
+  box-shadow: 1px 4px 16px 0px rgba(235, 94, 158, 0.10);
+  border-radius: 2px;
+  margin-bottom: 13px;
+}
+
+.market-card-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Baskerville;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.market-card-name {
+  color: var(--main-gray, #474747);
+  font-weight: 300;
+}
+
+.market-card-price {
+  color: var(--main-pink, #EB5E9E);
+  font-weight: 600;
+}
+
+.market-btn {
+  padding: 2px;
+  border-radius: 20px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.market-btn .market-btn-svg {
+  opacity: 0;
+}
+
+.market-incart {
+  background-color: var(--main-beige, #C2AC8F);
+  color: var(--main-white, #EFEBE4);
+}
+
+
+.market-btn-svg {
+  transition: .3s ease;
+}
+
+.market-btn-svg path {
+  transition: .3s ease;
+}
+
+.market-incart .market-btn-svg {
+  margin-left: 9px;
+  opacity: 1;
+}
+
+.market-incart:hover .market-btn-svg path {
+
+  stroke: var(--main-pink, #EB5E9E);
+}
+
+.market-btn:disabled {
+  border-radius: 20px;
+  opacity: 0.5;
+  background-color: var(--main-gray, #474747);
+}
+
+.market-btn:disabled:hover {
+  color: var(--main-white);
+  background-color: var(--main-gray, #474747);
+}
+
+.modal-market-title {
+  display: flex;
+  justify-content: space-between;
+  color: var(--main-gray, #474747);
+  font-family: Baskerville;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.modal-market-price {
+  color: var(--main-pink, #EB5E9E);
+}
+
+.modal-market-img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.modal-market-desc {
+  display: flex;
+  color: var(--main-gray, #474747);
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 138%;
+  margin-bottom: 19px;
+}
+
+.modal-market-btn {
+  font-size: 16px;
+  padding: 8px;
+}
+
+.market-nav {
+  position: absolute;
+  left: 45%;
+}

@@ -6,6 +6,10 @@
   right: 0;
 }
 
+.education-slide {
+  margin-bottom: 40px;
+}
+
 .education-desc-block {
   display: flex;
   gap: 7%;

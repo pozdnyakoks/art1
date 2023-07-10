@@ -5,14 +5,10 @@ import { Pagination, Mousewheel, EffectFade, Navigation, Autoplay } from 'swiper
 import 'swiper/css/pagination';
 import 'swiper/css/mousewheel';
 import 'swiper/css/effect-fade';
-// import 'swiper/css/navigation';
 
-const burgerBtn = document.querySelector('.burger-btn');
-const nav = document.querySelector('.nav');
-burgerBtn.addEventListener('click', () => {
-  nav.classList.toggle('active');
-  burgerBtn.classList.toggle('active');
-})
+import market from '/market.js';
+
+market();
 
 
 const apply = document.querySelector('#apply');
@@ -20,22 +16,17 @@ const modal = document.querySelector('.modal');
 
 const closeModal = document.querySelector('.close-modal');
 
-apply.addEventListener('click', () => {
-  console.log('click')
-  modal.classList.add('visible');
-})
 
 closeModal.addEventListener('click', () => {
   modal.classList.remove('visible');
 })
 
 
-document.addEventListener('click', (ev) => {
-  if (ev.target.classList.contains('nav')) {
-    nav.classList.remove('active');
-    burgerBtn.classList.remove('active');
-  }
+apply.addEventListener('click', () => {
+  modal.classList.add('visible');
+})
 
+document.addEventListener('click', (ev) => {
   if (ev.target.classList.contains('modal')) {
     modal.classList.remove('visible');
   }
@@ -100,8 +91,14 @@ const educationSwiper = new Swiper('.education-swiper', {
 
   direction: 'vertical',
   slidesPerView: 3.2,
-  spaceBetween: 40,
+  // spaceBetween: 40,
 
+})
+
+const marketSwiper = new Swiper('.market-swiper', {
+  direction: 'vertical',
+  slidesPerView: 2,
+  spaceBetweesn: 40,
 })
 
 const reviewsSwiper = new Swiper('.reviews-swiper', {
@@ -148,3 +145,29 @@ function init() {
 
 
 
+const selectSingle = document.querySelector('.modal-select');
+const selectSingle_title = selectSingle.querySelector('.modal-select__title');
+const selectSingle_labels = selectSingle.querySelectorAll('.modal-select__label');
+
+// Toggle menu
+selectSingle_title.addEventListener('click', () => {
+  if ('active' === selectSingle.getAttribute('data-state')) {
+    selectSingle.setAttribute('data-state', '');
+  } else {
+    selectSingle.setAttribute('data-state', 'active');
+  }
+});
+
+// Close when click to option
+for (let i = 0; i < selectSingle_labels.length; i++) {
+  selectSingle_labels[i].addEventListener('click', (evt) => {
+    selectSingle_title.textContent = evt.target.textContent;
+    selectSingle.setAttribute('data-state', '');
+  });
+}
+
+// Reset title
+// const reset = document.querySelector('.reset');
+// reset.addEventListener('click', () => {
+//   selectSingle_title.textContent = selectSingle_title.getAttribute('data-default');
+// });
