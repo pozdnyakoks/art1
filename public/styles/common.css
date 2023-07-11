@@ -91,7 +91,7 @@ header {
 
 .burger-line {
   width: 100%;
-  background-color: var(--main-beige);
+  background-color: var(--main-pink);
   border-radius: 20px;
   height: 2px;
   transition: .3s ease;
@@ -163,6 +163,12 @@ nav {
   font-weight: 300;
   line-height: normal;
   text-transform: uppercase;
+  transition: .3s ease;
+}
+
+.nav-list-item-link:hover,
+.nav-list-item-link:active {
+  color: var(--main-pink);
 }
 
 .backLogo {
@@ -224,14 +230,6 @@ section {
 }
 
 
-.about-img-back {
-  z-index: -1;
-  position: absolute;
-  right: 5%;
-  bottom: -24%;
-}
-
-
 footer {
   display: flex;
   justify-content: center;
@@ -270,12 +268,12 @@ footer a {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover:not(:disabled) {
   color: var(--main-pink);
   box-shadow: 15px 11px 39px 0px rgba(235, 94, 158, 0.20);
 }
 
-.btn:active {
+.btn:active:not(:disabled) {
   color: var(--main-pink);
   box-shadow: 15px 11px 46px 0px rgba(235, 94, 158, 0.35);
 
@@ -295,6 +293,29 @@ footer a {
 
 .cart-link {
   position: relative;
+  transform-origin: bottom;
+}
+
+.cart-link-animate {
+  animation: addCart 1.2s;
+}
+
+@keyframes addCart {
+  0% {
+    transform: scale(1);
+  }
+
+  35% {
+    transform: scale(1, 0.4);
+  }
+
+  65% {
+    transform: scale(1, 1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .cart-link-count {
@@ -310,6 +331,14 @@ footer a {
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
+  transition: 1.2s ease;
+  opacity: 0;
+  transform: scale(0)
+}
+
+.cart-link-count.visible {
+  opacity: 1;
+  transform: scale(1)
 }
 
 .modal-market-close {
@@ -321,14 +350,19 @@ footer a {
 .modal-market {
   opacity: 0;
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, .3);
   display: flex;
   justify-content: center;
   align-items: center;
+  top: 0;
+  /* left: 0; */
+  z-index: 11;
+  transition: .3s ease;
 }
+
 
 .modal-market.visible {
   opacity: 1;

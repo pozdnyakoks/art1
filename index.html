@@ -5,8 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ALISA FATTAKHOVA ART</title>
-  <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./index.css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/16.png">
+  <link rel="mask-icon" href="/favicon/32.ico" color="#5bbad5">
 
 </head>
 
@@ -23,25 +29,28 @@
           <div class="modal-select" data-state="">
             <div class="modal-select__title" data-default="Option 0">Хочу на арт-завтрак!</div>
             <div class="modal-select__content">
-              <input id="breakfastEvent" class="modal-select__input" type="radio" name="eventType" />
+              <input id="breakfastEvent" class="modal-select__input" type="radio" value="breakfast" name="eventType"
+                checked />
               <label for="breakfastEvent" class="modal-select__label">Хочу на арт-завтрак!</label>
-              <input id="bearsEvent" class="modal-select__input" type="radio" name="eventType" />
+              <input id="bearsEvent" class="modal-select__input" type="radio" value="bears" name="eventType" />
               <label for="bearsEvent" class="modal-select__label">Хочу на роспись мишек!</label>
-              <input id="newFashionEvent" class="modal-select__input" type="radio" name="eventType" />
+              <input id="newFashionEvent" class="modal-select__input" type="radio" value="fashion-new"
+                name="eventType" />
               <label for="newFashionEvent" class="modal-select__label">Fashion illustration: Я-новичок</label>
-              <input id="profiFashionEvent" class="modal-select__input" type="radio" name="eventType" />
+              <input id="profiFashionEvent" class="modal-select__input" type="radio" value="fashion-profi"
+                name="eventType" />
               <label for="profiFashionEvent" class="modal-select__label">Fashion illustration: Я-профи</label>
-              <input id="corporateEvent" class="modal-select__input" type="radio" name="eventType" />
+              <input id="corporateEvent" class="modal-select__input" type="radio" name="eventType" value="corporate" />
               <label for="corporateEvent" class="modal-select__label">хочу провести корпоратив</label>
-              <input id="lessonEvent" class="modal-select__input" type="radio" name="eventType" />
+              <input id="lessonEvent" class="modal-select__input" type="radio" name="eventType" value="lessons" />
               <label for="lessonEvent" class="modal-select__label">хочу научиться рисовать</label>
             </div>
           </div>
 
 
-          <input type="text" name="name" class="modal-input" placeholder="Ваше имя">
-          <input type="tel" name="tel" class="modal-input" placeholder="Ваш контактный номер телефона">
-          <input type="email" name="mail" class="modal-input" placeholder="Ваша электронная почта">
+          <input id="modalName" type="text" name="name" class="modal-input" placeholder="Ваше имя">
+          <input id="modalTel" type="tel" name="tel" class="modal-input" placeholder="Ваш контактный номер телефона">
+          <input id="modalEmail" type="email" name="mail" class="modal-input" placeholder="Ваша электронная почта">
           <button disabled class="modal-btn btn">Записаться</button>
         </form>
       </div>
@@ -75,7 +84,7 @@
       </ul>
     </header>
     <main>
-      <img class="logo" src="./img/logo.png" alt="Alisa Fattakhova Art">
+      <a class="logo" href="/"><img src="./img/logo.png" alt="Alisa Fattakhova Art"></a>
       <div class="swiper main-swiper">
         <div class="main-swiper-wrapper swiper-wrapper">
           <section class="section about swiper-slide main-swiper-slide" id="about">
@@ -120,7 +129,6 @@
                 <img class="about-img-back" src="./img/signature.svg" alt="подпись">
               </div>
             </div>
-            <!-- <img class="backLogo" src="./img/backlogo.png" alt=""> -->
           </section>
           <section class="section breakfast swiper-slide main-swiper-slide" id="breakfast">
             <div class="slide-content">
@@ -148,7 +156,7 @@
                 </div>
                 <img class="breakfast-img" src="./img/breakfast2.jpg" alt="арт-завтрак">
               </div>
-              <button id="apply" class="btn breakfast-btn">записаться</button>
+              <button class="btn breakfast-btn apply" data-value="breakfast">записаться</button>
             </div>
 
           </section>
@@ -176,7 +184,7 @@
                   Мы также уделяем внимание основам дизайна, силуэтам, пропорциям
                   и стилю, чтобы помочь вам создавать уникальные и выразительные модные иллюстрации.
                 </p>
-                <button class="btn bears-btn">записаться</button>
+                <button class="btn bears-btn apply" data-value="bears">записаться</button>
               </div>
               <div class="swiper bears-swiper">
                 <div class="swiper-wrapper">
@@ -208,7 +216,6 @@
 
               </div>
             </div>
-            <!-- <img class="backLogo" src="./img/backlogo.png" alt=""> -->
           </section>
           <section class="section fashion swiper-slide" id="fashion">
             <div class="slide-content">
@@ -235,9 +242,9 @@
                     и стилю, чтобы помочь вам создавать уникальные и выразительные модные иллюстрации.
                   </p>
                   <div class="fashion-btns">
-                    <button class="btn fashion-btn">Записаться на урок
+                    <button class="btn fashion-btn apply" data-value="fashion-new">Записаться на урок
                       для новичков</button>
-                    <button class="btn fashion-btn">Записаться на урок
+                    <button class="btn fashion-btn apply" data-value="fashion-profi">Записаться на урок
                       для продвинутых </button>
                   </div>
                 </div>
@@ -252,10 +259,10 @@
               <h2 class="title">корпоративы</h2>
               <div class="desc-block corporates-desc-block container">
                 <div class="corporate-imgs">
-                  <img class="corporate-img" src="/img/corporates/corporate1.jpg" alt="корпортаив">
-                  <img class="corporate-img" src="/img/corporates/corporate2.jpg" alt="корпортаив">
-                  <img class="corporate-img" src="/img/corporates/corporate3.jpg" alt="корпортаив">
-                  <img class="corporate-img" src="/img/corporates/corporate4.jpg" alt="корпортаив">
+                  <img class="corporate-img" src="/img/corporates/corporate1.jpg" alt="корпоратив">
+                  <img class="corporate-img" src="/img/corporates/corporate2.jpg" alt="корпоратив">
+                  <img class="corporate-img" src="/img/corporates/corporate3.jpg" alt="корпоратив">
+                  <img class="corporate-img" src="/img/corporates/corporate4.jpg" alt="корпоратив">
                 </div>
                 <div class="corporates-desc">
                   <p class="desc fashion-desc">
@@ -276,12 +283,11 @@
                     Мы также уделяем внимание основам дизайна, силуэтам, пропорциям
                     и стилю, чтобы помочь вам создавать уникальные и выразительные модные иллюстрации.
                   </p>
-                  <button class="btn corporates-btn">оставить заявку</button>
+                  <button class="btn corporates-btn apply" data-value="corporate">оставить заявку</button>
 
                 </div>
               </div>
             </div>
-            <!-- <img class="backLogo" src="./img/backlogo.png" alt=""> -->
 
 
           </section>
@@ -305,7 +311,7 @@
                     модных изображений. Мы предлагаем практический подход, который помогает
                     вам развить навыки рисования, анатомии, использования цвета и текстуры.
                   </p>
-                  <button class="btn education-btn">научиться рисовать! </button>
+                  <button class="btn education-btn apply" data-value="lessons">научиться рисовать! </button>
                 </div>
                 <img src="/img/education.jpg" alt="">
               </div>
@@ -337,178 +343,28 @@
 
           </section>
 
-          <div class="modal-market">
-            <div class="modal-market-content">
-              <button class="modal-market-close"><img src="/img/close.svg" alt="закрыть"></button>
-              <h3 class="modal-market-title"><span class="modal-market-name">футболка</span>
-                <span class="modal-market-price">2 800</span>
-              </h3>
-              <img class="modal-market-img" src="./img/market/market1.jpg" alt="">
-              <p class="modal-market-desc">Эта футболка является идеальным сочетанием стиля и комфорта.<br>
-                Ее уникальный дизайн и качественные материалы делают ее отличным выбором для любого повседневного
-                образа.</p>
-              <button class="btn market-btn modal-market-btn" disabled>в корзину<svg class="market-btn-svg"
-                  xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                  <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                </svg></button>
-            </div>
-          </div>
+
           <section class="section market swiper-slide" id="market">
+            <div class="modal-market">
+              <div class="modal-market-content">
+                <button class="modal-market-close"><img src="/img/close.svg" alt="закрыть"></button>
+                <h3 class="modal-market-title"><span class="modal-market-name"></span>
+                  <span class="modal-market-price"></span>
+                </h3>
+                <img class="modal-market-img" src="" alt="">
+                <p class="modal-market-desc"></p>
+                <button class="btn modal-market-btn" disabled><span class="modal-market-btn-text">в
+                    корзину</span><svg class="market-btn-svg" xmlns="http://www.w3.org/2000/svg" width="14" height="10"
+                    viewBox="0 0 14 10" fill="none">
+                    <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></button>
+              </div>
+            </div>
             <div class="slide-content">
               <h2 class="title">маркет</h2>
               <div class="swiper market-swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide market-slide">
-                    <div class="market-card">
-                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
-                      <p class="market-card-desc">
-                        <span class="market-card-name">сумка-тоут</span>
-                        <span class="market-card-price">1800</span>
-                      </p>
-                      <button class="btn market-btn" disabled>В корзину<svg class="market-btn-svg"
-                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></button>
-                    </div>
-                    <div class="market-card">
-                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
-                      <p class="market-card-desc">
-                        <span class="market-card-name">сумка-тоут</span>
-                        <span class="market-card-price">1800</span>
-                      </p>
-                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
-                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></button>
-                    </div>
-                    <div class="market-card">
-                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
-                      <p class="market-card-desc">
-                        <span class="market-card-name">сумка-тоут</span>
-                        <span class="market-card-price">1800</span>
-                      </p>
-                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
-                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></button>
-                    </div>
-                    <div class="market-card">
-                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
-                      <p class="market-card-desc">
-                        <span class="market-card-name">сумка-тоут</span>
-                        <span class="market-card-price">1800</span>
-                      </p>
-                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
-                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide market-slide">
-                    <div class="market-card">
-                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
-                      <p class="market-card-desc">
-                        <span class="market-card-name">сумка-тоут</span>
-                        <span class="market-card-price">1800</span>
-                      </p>
-                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
-                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></button>
-                    </div>
-                    <div class="market-card">
-                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
-                      <p class="market-card-desc">
-                        <span class="market-card-name">сумка-тоут</span>
-                        <span class="market-card-price">1800</span>
-                      </p>
-                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
-                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></button>
-                    </div>
-                    <div class="market-card">
-                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
-                      <p class="market-card-desc">
-                        <span class="market-card-name">сумка-тоут</span>
-                        <span class="market-card-price">1800</span>
-                      </p>
-                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
-                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></button>
-                    </div>
-                    <div class="market-card">
-                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
-                      <p class="market-card-desc">
-                        <span class="market-card-name">сумка-тоут</span>
-                        <span class="market-card-price">1800</span>
-                      </p>
-                      <button class="btn market-btn market-incart">В корзине<svg class="market-btn-svg"
-                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide market-slide">
-                    <div class="market-card">
-                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
-                      <p class="market-card-desc">
-                        <span class="market-card-name">сумка-тоут</span>
-                        <span class="market-card-price">1800</span>
-                      </p>
-                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
-                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></button>
-                    </div>
-                    <div class="market-card">
-                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
-                      <p class="market-card-desc">
-                        <span class="market-card-name">сумка-тоут</span>
-                        <span class="market-card-price">1800</span>
-                      </p>
-                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
-                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></button>
-                    </div>
-                    <div class="market-card">
-                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
-                      <p class="market-card-desc">
-                        <span class="market-card-name">сумка-тоут</span>
-                        <span class="market-card-price">1800</span>
-                      </p>
-                      <button class="btn market-btn">В корзину<svg class="market-btn-svg"
-                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></button>
-                    </div>
-                    <div class="market-card">
-                      <img class="market-card-img" src="./img/market/market1.jpg" alt="">
-                      <p class="market-card-desc">
-                        <span class="market-card-name">сумка-тоут</span>
-                        <span class="market-card-price">1800</span>
-                      </p>
-                      <button class="btn market-btn market-incart">В корзине<svg class="market-btn-svg"
-                          xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                          <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></button>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -524,78 +380,88 @@
               <h2 class="title">отзывы</h2>
               <div class="swiper reviews-swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide reviews-slide">
-                    <img class="review-slide-img" src="/img/reviews/review1.jpg" alt="">
-                    <h3 class="review-slide-title">Аня и артемий</h3>
-                    <p class="review-slide-desc review-slide-highlighted-desc">Это было незабываемое путешествие в мир
-                      искусства, которое мы никогда не забудем.</p>
-                    <p class="review-slide-desc">Мы настоятельно рекомендуем этот арт-класс всем, кто хочет раскрыть
-                      свой
-                      творческий потенциал и насладиться процессом
-                      создания искусства.</p>
-                    <div class="review-slide-link-block">
-                      <a class="review-slide-link" href="#">@anya989</a>
+                  <div class="reviews-slide swiper-slide">
+                    <div class="reviews-item">
+
+                      <img class="review-slide-img" src="/img/reviews/review1.jpg" alt="">
+                      <h3 class="review-slide-title">Аня и артемий</h3>
+                      <p class="review-slide-desc review-slide-highlighted-desc">Это было незабываемое путешествие в мир
+                        искусства, которое мы никогда не забудем.</p>
+                      <p class="review-slide-desc">Мы настоятельно рекомендуем этот арт-класс всем, кто хочет раскрыть
+                        свой
+                        творческий потенциал и насладиться процессом
+                        создания искусства.</p>
+                      <div class="review-slide-link-block">
+                        <a class="review-slide-link" href="#">@anya989</a><br>
+                        <a class="review-slide-link" href="#">@art24546</a>
+                      </div>
+                    </div>
+                    <div class="reviews-item">
+                      <img class="review-slide-img" src="/img/reviews/review2.jpg" alt="">
+                      <h3 class="review-slide-title">катя</h3>
+                      <p class="review-slide-desc review-slide-highlighted-desc">Я ощутила, как мои навыки в рисовании и
+                        живописи значительно улучшились после посещения этого арт-класса.</p>
+                      <p class="review-slide-desc">Более того, я получил ценные советы и обратную связь от
+                        преподавателей,
+                        которые помогли мне расти и развиваться как
+                        художник.</p>
+                      <div class="review-slide-link-block">
+                        <a class="review-slide-link" href="#">@inessa99 </a>
+                      </div>
+                    </div>
+                    <div class=" reviews-item">
+                      <img class="review-slide-img" src="/img/reviews/review3.jpg" alt="">
+                      <h3 class="review-slide-title">Инесса</h3>
+                      <p class="review-slide-desc review-slide-highlighted-desc">Я посетила арт-класс и осталась в
+                        полном
+                        восторге!</p>
+                      <p class="review-slide-desc">Это было незабываемое и вдохновляющее мероприятие. Преподаватели были
+                        высококвалифицированнымим профессионалами, которые
+                        смогли передать свои знания и страсть к искусству.</p>
+                      <div class="review-slide-link-block">
+                        <a class="review-slide-link" href="#">@inessa99</a>
+                      </div>
                     </div>
                   </div>
-                  <div class="swiper-slide reviews-slide">
-                    <img class="review-slide-img" src="/img/reviews/review2.jpg" alt="">
-                    <h3 class="review-slide-title">катя</h3>
-                    <p class="review-slide-desc review-slide-highlighted-desc">Я ощутила, как мои навыки в рисовании и
-                      живописи значительно улучшились после посещения этого арт-класса.</p>
-                    <p class="review-slide-desc">Более того, я получил ценные советы и обратную связь от преподавателей,
-                      которые помогли мне расти и развиваться как
-                      художник.</p>
-                    <div class="review-slide-link-block">
-                      <a class="review-slide-link" href="#">@inessa99 </a>
+                  <div class="reviews-slide swiper-slide">
+                    <div class=" reviews-item">
+                      <img class="review-slide-img" src="/img/reviews/review1.jpg" alt="">
+                      <h3 class="review-slide-title">Аня и артемий</h3>
+                      <p class="review-slide-desc review-slide-highlighted-desc">Это было незабываемое путешествие в мир
+                        искусства, которое мы никогда не забудем.</p>
+                      <p class="review-slide-desc">Мы настоятельно рекомендуем этот арт-класс всем, кто хочет раскрыть
+                        свой
+                        творческий потенциал и насладиться процессом
+                        создания искусства.</p>
+                      <div class="review-slide-link-block">
+                        <a class="review-slide-link" href="#">@anya989</a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide reviews-slide">
-                    <img class="review-slide-img" src="/img/reviews/review3.jpg" alt="">
-                    <h3 class="review-slide-title">Инесса</h3>
-                    <p class="review-slide-desc review-slide-highlighted-desc">Я посетила арт-класс и осталась в полном
-                      восторге!</p>
-                    <p class="review-slide-desc">Это было незабываемое и вдохновляющее мероприятие. Преподаватели были
-                      высококвалифицированнымим профессионалами, которые
-                      смогли передать свои знания и страсть к искусству.</p>
-                    <div class="review-slide-link-block">
-                      <a class="review-slide-link" href="#">@inessa99</a>
+                    <div class="reviews-item">
+                      <img class="review-slide-img" src="/img/reviews/review2.jpg" alt="">
+                      <h3 class="review-slide-title">катя</h3>
+                      <p class="review-slide-desc review-slide-highlighted-desc">Я ощутила, как мои навыки в рисовании и
+                        живописи значительно улучшились после посещения этого арт-класса.</p>
+                      <p class="review-slide-desc">Более того, я получил ценные советы и обратную связь от
+                        преподавателей,
+                        которые помогли мне расти и развиваться как
+                        художник.</p>
+                      <div class="review-slide-link-block">
+                        <a class="review-slide-link" href="#">@inessa99 </a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide reviews-slide">
-                    <img class="review-slide-img" src="/img/reviews/review1.jpg" alt="">
-                    <h3 class="review-slide-title">Аня и артемий</h3>
-                    <p class="review-slide-desc review-slide-highlighted-desc">Это было незабываемое путешествие в мир
-                      искусства, которое мы никогда не забудем.</p>
-                    <p class="review-slide-desc">Мы настоятельно рекомендуем этот арт-класс всем, кто хочет раскрыть
-                      свой
-                      творческий потенциал и насладиться процессом
-                      создания искусства.</p>
-                    <div class="review-slide-link-block">
-                      <a class="review-slide-link" href="#">@anya989</a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide reviews-slide">
-                    <img class="review-slide-img" src="/img/reviews/review2.jpg" alt="">
-                    <h3 class="review-slide-title">катя</h3>
-                    <p class="review-slide-desc review-slide-highlighted-desc">Я ощутила, как мои навыки в рисовании и
-                      живописи значительно улучшились после посещения этого арт-класса.</p>
-                    <p class="review-slide-desc">Более того, я получил ценные советы и обратную связь от преподавателей,
-                      которые помогли мне расти и развиваться как
-                      художник.</p>
-                    <div class="review-slide-link-block">
-                      <a class="review-slide-link" href="#">@inessa99 </a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide reviews-slide">
-                    <img class="review-slide-img" src="/img/reviews/review3.jpg" alt="">
-                    <h3 class="review-slide-title">Инесса</h3>
-                    <p class="review-slide-desc review-slide-highlighted-desc">Я посетила арт-класс и осталась в полном
-                      восторге!</p>
-                    <p class="review-slide-desc">Это было незабываемое и вдохновляющее мероприятие. Преподаватели были
-                      высококвалифицированнымим профессионалами, которые
-                      смогли передать свои знания и страсть к искусству.</p>
-                    <div class="review-slide-link-block">
-                      <a class="review-slide-link" href="#">@inessa99</a>
+                    <div class=" reviews-item">
+                      <img class="review-slide-img" src="/img/reviews/review3.jpg" alt="">
+                      <h3 class="review-slide-title">Инесса</h3>
+                      <p class="review-slide-desc review-slide-highlighted-desc">Я посетила арт-класс и осталась в
+                        полном
+                        восторге!</p>
+                      <p class="review-slide-desc">Это было незабываемое и вдохновляющее мероприятие. Преподаватели были
+                        высококвалифицированнымим профессионалами, которые
+                        смогли передать свои знания и страсть к искусству.</p>
+                      <div class="review-slide-link-block">
+                        <a class="review-slide-link" href="#">@inessa99</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -641,7 +507,7 @@
             <!-- <img class="backLogo" src="./img/backlogo.png" alt=""> -->
 
           </section>
-          <section class="section map swiper-slide" id="maps">
+          <section class="section map swiper-slide" id="contacts">
             <div class="slide-content">
 
               <h2 class="title">как нас найти?</h2>
@@ -671,7 +537,7 @@
     </main>
     <div class="cart-link-block">
       <a class="cart-link" href="cart.html"><img class="cart-link-img" src="/img/cart.svg" alt="корзина"><span
-          class="cart-link-count">2</span></a>
+          class="cart-link-count"></span></a>
     </div>
     <div class="swiper-pagination main-swiper-pagination"></div>
     <footer><a href="http://www.creativesight.group/" target="_blank"><img class="footer-img" src="./img/csg.png"

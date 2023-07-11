@@ -1,16 +1,23 @@
 .reviews-swiper {
-  width: 1140px;
+  /* width: 1140px; */
+  max-height: 500px;
 }
 
-.reviews-slide {
+.reviews-item {
   text-align: center;
   max-width: 320px;
-  margin-left: 60px;
+  /* margin-left: 60px; */
   padding-bottom: 40px;
+  position: relative;
 }
 
-/* .reviews-swiper .swiper-wrapper {
-  justify-content: end;
+.swiper-slide.reviews-slide {
+  display: flex;
+  gap: 60px;
+}
+
+/* .reviews .slide-content {
+  position: relative;
 } */
 
 .review-slide-img {
@@ -62,6 +69,7 @@
   font-weight: 300;
   line-height: normal;
   text-transform: uppercase;
+  /* display:  */
 }
 
 .review-slide-link::before {
@@ -78,14 +86,19 @@
 
 .reviews-nav {
   position: absolute;
-  top: 49%;
+  left: 49.6%;
+  ;
 }
 
 .reviews-slider-prev {
+  transform: rotate(90deg);
   z-index: 4;
-  left: 11.5%;
+  top: 19%;
+  /* left: 11.5%; */
 }
 
 .reviews-slider-next {
-  right: 7.5%;
+  transform: rotate(90deg);
+  bottom: 13%;
+  /* right: 7.5%; */
 }

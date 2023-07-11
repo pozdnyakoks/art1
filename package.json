@@ -12,6 +12,8 @@
     "vite": "^4.4.0"
   },
   "dependencies": {
+    "imask": "^7.1.0-alpha.0",
+    "just-validate": "^4.2.0",
     "swiper": "^10.0.3"
   }
 }

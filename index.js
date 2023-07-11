@@ -14,3 +14,21 @@ document.addEventListener('click', (ev) => {
     burgerBtn.classList.remove('active');
   }
 })
+
+
+const lsData = localStorage.getItem('artMarket');
+let count = 0;
+let slides = '';
+const cartCount = document.querySelector('.cart-link-count');
+const cart = document.querySelector('.cart-link');
+
+if (lsData !== null) {
+  const length = JSON.parse(lsData).length;
+  count = length;
+  if (length > 0) {
+    cartCount.classList.add('visible');
+    cartCount.textContent = count;
+  } else {
+    cartCount.classList.remove('visible');
+  }
+}
