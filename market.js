@@ -4,10 +4,11 @@ import items from './market.json'
 export default function market() {
   const arr = items.items;
   const lsData = localStorage.getItem('artMarket');
-  let count = 0;
+  let count = lsData === null ? 0 : JSON.parse(lsData).length;
   let slides = '';
   const cartCount = document.querySelector('.cart-link-count');
   const cart = document.querySelector('.cart-link');
+
 
   for (let i = 0; i < arr.length;) {
     slides += `<div class="swiper-slide market-slide">`
@@ -19,12 +20,12 @@ export default function market() {
       }
       slides += `
       <div class="market-card">
-        <img class="market-card-img" src=${arr[i].img} alt=${arr[i].name} data-available=${arr[i].available} data-img='${arr[i].img}' data-id='${arr[i].id}' data-desc='${arr[i].description}' data-name='${arr[i].name}' data-price='${arr[i].price}'>
+        <img class="market-card-img" src=${arr[i].img} alt=${arr[i].name} data-info='${arr[i].info}' data-available=${arr[i].available} data-img='${arr[i].img}' data-id='${arr[i].id}' data-desc='${arr[i].description}' data-name='${arr[i].name}' data-price='${arr[i].price}'>
         <p class="market-card-desc">
           <span class="market-card-name">${arr[i].name}</span>
           <span class="market-card-price">${arr[i].price}</span>
         </p>
-        <button data-id=${arr[i].id} data-name=${arr[i].name} data-price=${arr[i].price} data-img=${arr[i].img} class="btn market-btn ${inLs ? "market-incart" : ''}" ${arr[i].available ? '' : 'disabled'}><span class="market-btn-text">${inLs ? 'В корзине' : 'В корзину'}</span><svg class="market-btn-svg"
+        <button data-id=${arr[i].id} data-name=${arr[i].name} data-price=${arr[i].price} data-info='${arr[i].info}' data-img=${arr[i].img} class="btn market-btn ${inLs ? "market-incart" : ''}" ${arr[i].available ? '' : 'disabled'}><span class="market-btn-text">${inLs ? 'В корзине' : 'В корзину'}</span><svg class="market-btn-svg"
             xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
             <path d="M5 9L13 1" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M5 9L1 5" stroke="#EFEBE4" stroke-linecap="round" stroke-linejoin="round" />
@@ -40,8 +41,12 @@ export default function market() {
   document.querySelector('.market-swiper .swiper-wrapper').insertAdjacentHTML('afterbegin', slides)
 
   function toLS() {
-    this.classList.add('market-incart');
-    this.querySelector('.market-btn-text').textContent = 'В корзине';
+    document.querySelectorAll(`[data-id='${this.dataset.id}']`).forEach(btn => {
+      btn.classList.add('market-incart');
+      this.querySelector(this.classList.contains('modal-market-btn') ? '.modal-market-btn-text' : '.market-btn-text').textContent = 'В корзине';
+      btn.removeEventListener('click', toLS)
+
+    })
 
     if (count === 0) {
       cart.classList.add('cart-link-animate');
@@ -57,7 +62,8 @@ export default function market() {
         count: 1,
         name: this.dataset.name,
         price: this.dataset.price,
-        img: this.dataset.img
+        img: this.dataset.img,
+        info: this.dataset.info
       }];
       localStorage.setItem('artMarket', JSON.stringify(data));
     } else {
@@ -67,17 +73,19 @@ export default function market() {
         count: 1,
         name: this.dataset.name,
         price: this.dataset.price,
-        img: this.dataset.img
+        img: this.dataset.img,
+        info: this.dataset.info
+
       })
       localStorage.setItem('artMarket', JSON.stringify(lsAr));
     }
-
+    this.removeEventListener('click', toLS)
   }
 
   const marketBtns = document.querySelectorAll('.market-btn')
   marketBtns.forEach(btn => {
+
     if (!btn.classList.contains('market-incart')) {
-      console.log('hhh')
       btn.addEventListener('click', toLS);
     }
   })
@@ -101,16 +109,21 @@ export default function market() {
       modalBtn.dataset.img = card.dataset.img;
 
       modalBtn.disabled = card.dataset.available == 'false';
+
+      const lsData = localStorage.getItem('artMarket');
       modal.classList.add('visible');
       if (lsData !== null) {
         const find = JSON.parse(lsData).find(el => el.id == card.dataset.id);
-        console.log(find)
         if (find !== undefined) {
           modalBtn.disabled = false;
           modalBtn.classList.add('market-incart');
           modal.querySelector('.modal-market-btn-text').textContent = 'В корзине';
+        } else {
+          modalBtn.classList.remove('market-incart');
+          modal.querySelector('.modal-market-btn-text').textContent = 'В корзину';
         }
       }
+
       if (!modalBtn.classList.contains('market-incart')) {
         modalBtn.addEventListener('click', toLS);
       }

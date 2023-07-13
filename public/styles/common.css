@@ -71,7 +71,7 @@ main {
 
 header {
   z-index: 10;
-  padding-left: 27px;
+  padding-left: 14px;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -82,8 +82,8 @@ header {
 
 .burger-btn {
   z-index: 10;
-  width: 55px;
-  height: 22px;
+  width: 87px;
+  height: 39px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -92,8 +92,8 @@ header {
 .burger-line {
   width: 100%;
   background-color: var(--main-pink);
-  border-radius: 20px;
-  height: 2px;
+  border-radius: 20%;
+  height: 5px;
   transition: .3s ease;
 }
 
@@ -103,6 +103,7 @@ header {
 }
 
 .burger-line:nth-child(2) {
+  border-radius: 20px;
   width: 100%;
   align-self: end;
 }
@@ -359,7 +360,7 @@ footer a {
   align-items: center;
   top: 0;
   /* left: 0; */
-  z-index: 11;
+  z-index: 50;
   transition: .3s ease;
 }
 

@@ -77,7 +77,7 @@
   position: absolute;
   height: 15px;
   width: 18px;
-  background-image: url('./img/reviews/bear.svg');
+  background-image: url('./../img/reviews/bear.svg');
   background-repeat: no-repeat;
   left: -29%;
   top: 3%;
